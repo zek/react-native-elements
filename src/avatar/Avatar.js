@@ -191,13 +191,7 @@ const styles = StyleSheet.create({
 });
 
 Avatar.propTypes = {
-  Component: PropTypes.oneOf([
-    View,
-    TouchableOpacity,
-    TouchableHighlight,
-    TouchableNativeFeedback,
-    TouchableWithoutFeedback,
-  ]),
+  Component: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
   onPress: PropTypes.func,
   onLongPress: PropTypes.func,
   containerStyle: ViewPropTypes.style,
